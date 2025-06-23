@@ -1,0 +1,146 @@
+.footer-section {
+  background-color: #0A0A0A; /* Deep black, consistent with other sections */
+  color: #AAAAAA; /* Muted text for general info */
+  padding: 4rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtle separator */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid for columns */
+  gap: 2rem;
+}
+
+.footer-brand h2 {
+  font-family: 'Oswald', sans-serif; /* Consistent heading font */
+  font-size: 1.8rem;
+  color: #FFFFFF; /* White for brand name */
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.footer-brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-nav h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.footer-nav ul {
+  list-style: none;
+}
+
+.footer-nav li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #AAAAAA;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #FF4500; /* Accent color on hover */
+}
+
+.footer-newsletter-social h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.footer-newsletter-social p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border: 1px solid #333333;
+  background-color: #1A1A1A; /* Dark input background */
+  color: #FFFFFF;
+  border-radius: 5px 0 0 5px; /* Rounded left side */
+  font-size: 0.9rem;
+}
+
+.newsletter-form input::placeholder {
+  color: #666666;
+}
+
+.newsletter-form button {
+  background-color: #FF4500; /* Accent color */
+  color: #FFFFFF;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded right side */
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #E63D00;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #AAAAAA;
+  font-size: 1.5rem;
+  text-decoration: none; /* Remove underline for FB IG TW YT */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FF4500; /* Accent color on hover */
+}
+
+/* Mobile Responsiveness for Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+    text-align: center; /* Center text for stacked columns */
+  }
+  .footer-nav ul, .social-links, .newsletter-form {
+    justify-content: center; /* Center nav items and social links */
+  }
+  .footer-brand h2, .footer-nav h3, .footer-newsletter-social h3 {
+    text-align: center; /* Ensure headings are centered */
+  }
+  .newsletter-form {
+    max-width: 300px; /* Limit width of form */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,97 @@
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+         url('https://picsum.photos/seed/denim/1920/1080?grayscale&blur=2'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    /* Add subtle animation */
+    animation: heroZoomPan 30s infinite alternate ease-in-out;
+    /* Slow zoom/pan */
+    z-index: 1;
+}
+
+/* Define the keyframes for the animation */
+@keyframes heroZoomPan {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+
+    100% {
+        transform: scale(1.1) translateX(5%);
+        /* Slightly zoom in and pan right */
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 1.5rem;
+}
+
+.hero-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5.5rem;
+    line-height: 1.05;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-cta {
+    background-color: #FF4500;
+    color: #FFFFFF;
+    padding: 1rem 2.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-cta:hover {
+    background-color: #E63D00;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsiveness for Hero */
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 3rem;
+    }
+
+    .hero-cta {
+        padding: 0.9rem 2.2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+}
